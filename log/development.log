@@ -40,3 +40,92 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title Goes Here"], ["description", "Description Goes Here"], ["created_at", "2019-07-05 07:12:12.788610"], ["updated_at", "2019-07-05 07:12:12.788610"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 104.162.182.37 at 2019-07-06 05:57:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (5.5ms)
+Completed 200 OK in 30ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 104.162.182.37 at 2019-07-06 05:57:55 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 366ms (Views: 351.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/posts" for 104.162.182.37 at 2019-07-06 05:58:18 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tVgkPYnY32m8+FVAi14oGx4QNQ3u7OANkAJGhhW7ug/RduENT6qqYFmnLLiKQbR+FWfYEtqcNQfmGkRS6X8wug==", "title"=>"Mi blog", "description"=>"Este es mi blog", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Mi blog"], ["description", "Este es mi blog"], ["created_at", "2019-07-06 05:58:18.968580"], ["updated_at", "2019-07-06 05:58:18.968580"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 19ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/new" for 104.162.182.37 at 2019-07-06 05:59:19 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 104.162.182.37 at 2019-07-06 05:59:27 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EoARyfgGScBfouMnI5jQSFRcy9BaOerQH0yfpHNqBjt2rtT5PnQ8ybr9mt8ih0wtXysmz25JP9ppVJ1wj66Mjg==", "title"=>"La vida", "description"=>"sssss", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "La vida"], ["description", "sssss"], ["created_at", "2019-07-06 05:59:27.451380"], ["updated_at", "2019-07-06 05:59:27.451380"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 2.1ms)
+
+
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/" for 104.162.182.37 at 2019-07-06 06:05:00 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 29ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 104.162.182.37 at 2019-07-06 06:05:07 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 193ms (Views: 178.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 104.162.182.37 at 2019-07-06 06:05:18 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 104.162.182.37 at 2019-07-06 06:05:35 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QzeWNGu4w0M9iUIEMHXqj9Bh1meukWZp3o2ewAqMTT0nGVMErcq2StjWO/wxanbq2xY7eJrhs2OolZwU9kjHiA==", "title"=>"My Blog", "description"=>"Este es mi blog cabrones", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Blog"], ["description", "Este es mi blog cabrones"], ["created_at", "2019-07-06 06:05:35.869274"], ["updated_at", "2019-07-06 06:05:35.869274"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.182.198:53197/posts/5
+Completed 302 Found in 8ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/posts/5" for 104.162.182.37 at 2019-07-06 06:05:35 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
